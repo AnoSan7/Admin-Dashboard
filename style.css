@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+.dashboard{
+    background-color: rgb(48, 151, 192);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1rem;
+}
+.dashboard ul{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.line{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 2px solid;
+    
+}
