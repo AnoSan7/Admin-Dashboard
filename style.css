@@ -10,6 +10,7 @@ ul{
     grid-template-columns: 1fr 4fr;
 }
 .dashboard{
+    min-height: 100vh;
     background-color: rgb(48, 151, 192);
     color: white;
     display: flex;
@@ -24,10 +25,48 @@ ul{
     flex-direction: column;
     gap: 0.5rem;
 }
-
+.header{
+    display: grid;
+    grid-template-columns: 0.5fr 7fr 5fr;
+}
+.header .buttons{
+    display: flex;
+    justify-content: space-evenly;
+}
+.heading{
+    display: grid;
+    grid-template-columns: 1fr 5fr 4fr;
+}
+.heading .buttons{
+    display: flex;
+    /* gap: 1rem; */
+    align-items: center;
+    justify-content: space-evenly;
+}
 .line{
     margin-top: 1rem;
     margin-bottom: 1rem;
     border: 2px solid;
-    
+}
+.main{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    column-gap: 1rem;
+}
+.project{
+    padding-left: 1rem;
+    padding-bottom: 4rem;
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap:1rem;
+}
+.card{
+    border: 1px solid black;
+    padding: 1rem;
+}
+.sidebar{
+    padding-right: 1rem;
+    padding-bottom: 4rem;
 }
