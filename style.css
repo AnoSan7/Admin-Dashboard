@@ -1,10 +1,20 @@
+@font-face {
+    font-family: roboto;
+    src: url(./fonts/Roboto-VariableFont_wdth\,wght.ttf);
+}
 *{
     margin: 0;
     padding: 0;
+    font-family: roboto;
 }
 ul{
     list-style: none;
 }
+.icon{
+    filter: invert(1) brightness(2);
+    height: 1em;
+}
+
 .container{
     display: grid;
     grid-template-columns: 1fr 4fr;
@@ -20,10 +30,28 @@ ul{
     padding-left: 1.5rem;
     padding-right: 1rem;
 }
-.dashboard ul{
+.main-nav,.secondary-nav{
     display: flex;
     flex-direction: column;
+    /* align-items: center; */
+}
+.dashboard ul{
+    gap: 0.7rem;
+}
+.dashboard li{
+    display: flex;
+    gap: 1rem;
+}
+.dashboard-title{
+    display: flex;
     gap: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+.dashboard-title .icon{
+    height: 1.5em;
 }
 .header{
     display: grid;
