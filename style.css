@@ -14,7 +14,30 @@ ul {
     filter: invert(1) brightness(2);
     height: 1em;
 }
-
+.main-head{
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    padding: 1rem;
+    padding-bottom: 0;
+    background-color: rgb(48, 151, 192);
+}
+.main-head button {
+    background-color: rgb(48, 151, 192);
+    color: white;
+    border: none;
+    font-size: 3rem;
+    height: 4rem;
+    width: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-head .text {
+    place-self: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
 .container {
     display: grid;
     grid-template-columns: 1fr 4fr;
@@ -66,7 +89,9 @@ ul {
     align-items: center;
 }
 .header img {
-    height: 1rem;
+    max-height: 1rem;
+    max-width: 1rem;
+    aspect-ratio: 1;
 }
 .right .profile {
     background-color: rgb(205, 121, 24);
@@ -94,13 +119,14 @@ ul {
     padding-top: 1rem;
     padding-left: 2rem;
     display: grid;
-    grid-template-columns: 1fr 5fr 4fr;
+    grid-template-columns: 4fr 3fr;
     align-items: center;
     gap: 2rem;
 }
 .heading .buttons {
     padding-right: 2rem;
-    margin-left: auto;
+    width: 100%;
+    justify-content: space-evenly;
     display: flex;
     gap: 1rem;
     align-items: center;
@@ -112,9 +138,18 @@ ul {
     padding: 0.5rem 1.5rem;
     border-radius: 23px;
 }
+.profiles{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    /* justify-content: flex-start; Align items to the start */
+    gap: 1rem; /* Add gap between profile and text/buttons */
+}
 .heading .profile {
-    height: 5rem;
-    width: 5rem;
+    max-height: 100%;
+    max-width: 7rem;      /* Increased from 5rem to 7rem */
+    aspect-ratio: 1;
+    /* margin-right: 1rem; Add spacing to the right */
 }
 .horizontal-line {
     width: 100%;
@@ -319,9 +354,9 @@ button:active {
     transform: translateX(1px) scale(0.98);
 }
 @media(max-width: 768px) {
-    body{
+    /* body{
         overflow-x: hidden;
-    }
+    } */
     .container{
         display: flex;
         flex-direction: column;
@@ -343,6 +378,11 @@ button:active {
         justify-content: space-between;
         /* padding: 1rem 2rem; */
     }
+    .header .buttons{
+        margin: 0;
+        padding: 0;
+        justify-content: space-around;
+    }
     .heading{
         display: flex;
         flex-direction: column;
@@ -357,7 +397,9 @@ button:active {
     }
     .heading .buttons{
         padding: 0;
-        justify-content: space-between;
+        width: 100%;
+        margin-left:0;
+        /* justify-content: space-between; */
     }
     .main{
         display: flex;
@@ -365,5 +407,14 @@ button:active {
         align-items: center;
         justify-content: space-between;
         padding: 1rem 2rem;
+    }
+    .heading .profile {
+        max-width: 4rem;  /* Increased from 2.5rem to 4rem */
+        max-height: 4rem;
+        margin-right: 0.75rem; /* Slightly smaller margin on mobile */
+    }
+    .profiles {
+        gap: 0.75rem;
+        justify-content: center; /* Center on small screens */
     }
 }
